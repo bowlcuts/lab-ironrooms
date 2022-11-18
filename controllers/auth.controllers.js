@@ -86,10 +86,14 @@ const signupGetController =  (req, res, next) => {
     res.render('index.hbs', req.session.user);
 }
 
+// const createRoom = (req, res, next) => {
+
+// }
+
   module.exports = {
     signupGetController,
     signupPostController,
     loginGetController,
     loginPostController,
-    profileGetController
+    profileGetController,
   };
