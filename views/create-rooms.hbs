@@ -1,0 +1,35 @@
+<h2>Create room</h2>
+<form action="/create-rooms" method="post">
+
+
+<div>
+<label for="name">Name</label>
+</div>
+<div>
+    <input type="text" name="name" id="name">
+</div>
+<div>
+<label for="description">Description</label>
+</div>
+<div>
+    <input type="text" name="description" id="description">
+</div>
+<div>
+<label for="imageUrl">imageUrl</label>
+</div>
+<div>
+    <input type="text" name="imageUrl" id="imageUrl">
+</div>
+<div>
+
+<button type="submit">Create room</button>
+</form>
+
+{{!-- name: { type: String },
+  description: { type: String },
+  imageUrl: { type: String },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
+ reviews: [], // we --}}

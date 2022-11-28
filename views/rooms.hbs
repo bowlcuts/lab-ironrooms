@@ -1,0 +1,34 @@
+<h2>Rooms</h2>
+
+{{#if message}}
+    <h3>{{message}}</h3>
+{{/if}}
+
+{{#each roomsArray}}
+<img src="{{imageUrl}}" alt="" style="height: 200px; width: 250px;">
+<h3>Name: {{owner.fullName}}</h3>
+<h5>{{description}}</h5>
+
+{{#each reviews}}
+    <h4>Reviews</h4>
+    <h4>{{user.fullName}}</h4>
+    <p>-{{comment}}</p>
+{{/each}}
+
+<form action="/reviews/{{_id}}/add-reviews" method="get">
+<button>Add Review</button>
+</form>
+
+{{#unless isLoggedIn}}
+<form action="/rooms/{{_id}}/edit-room">
+<button value="edit">Edit</button>
+</form>
+<form action="/rooms/{{_id}}/delete" method="post">
+<button value="delete">Delete!</button>
+</form>
+
+<hr>
+{{/unless}}
+{{/each}}
+
+<a href="/create-rooms">Create a room</a>
